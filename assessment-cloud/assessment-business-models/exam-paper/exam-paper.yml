@@ -1,0 +1,22 @@
+-- Database: MongoDB
+
+# 试卷模子
+ExamPaper:
+  # TODO
+
+# 可复合的试卷子块
+CompositeEpSection:
+  title: ""                               # M
+  purpose: ""                             #   =(values)=>{"Formal", "Experiment", ...}
+  description: ""                         # M 用于管理
+  introduction: ""                        # M 试卷子块引导语, 富文本编辑器输出的结果
+  sub-sections:
+    - {CompositeEpSection}
+  ep-questions:
+    - {EpQuestion}
+  time-limit: 0                           # O unit: second
+  ext-features:                           # O 特征向量, 有业务含义
+    k1: {DesignProperty}
+    kn: {DesignProperty}
+  default-qu-score: 0                     # O
+  # TODO

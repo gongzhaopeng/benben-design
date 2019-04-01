@@ -1,0 +1,88 @@
+-- Database: MongoDB
+
+# 试卷模子
+ExamPaperMold:
+  id: ""                                  # M
+  bid:                                    # M 业务ID
+    - ""                                  #   =(example)=>{"XIAOSHENGCHU", ...}
+    - ""                                  #   =(example)=>{"BEIJING", ...}
+    - ""                                  #   =(example)=>{"SIZHONG", ...}
+    - ""                                  #   =(example)=>{"1001", ...}
+    - ...
+  titile: ""                              # M
+  description: ""                         # M 用于管理
+  introduction: ""                        # M 试卷引导语, 富文本编辑器输出的结果
+  eps-generators:                         # M 试卷子块生成器集合
+    - {CompositeEpsGenerator}
+  time-limit: 0                           # O unit: second
+  tags:                                   # O 用于试卷管理
+    - ""                                  #
+  ext-features:                           # O 特征向量, 有业务含义
+    k1: {DesignProperty}
+    kn: {DesignProperty}
+  default-qu-score: 0                     # O
+  # TODO
+
+# 可复合的试卷子块生成器
+CompositeEpsGenerator:
+  title: ""                               # M
+  description: ""                         # M 用于管理
+  introduction: ""                        # M 试卷子块引导语, 富文本编辑器输出的结果
+  generate-strategy: {EpsGenerateStrategy}
+  sub-generators:
+    - {CompositeEpsGenerator}
+  ep-questions:
+    - {EpQuestion}
+  time-limit: 0                           # O unit: second
+  ext-features:                           # O 特征向量, 有业务含义
+    k1: {DesignProperty}
+    kn: {DesignProperty}
+  default-qu-score: 0                     # O
+
+# 试卷子块生成策略
+EpsGenerateStrategy:
+  type: ""                                #   策略类型, =(values)=>{"Composite_Fix", "Composite_Rand" "QSet_Fix", "QSet_Rand"}
+  metadata:                               #   策略metadata
+    k1: "v1"                              #   =(example)=> {"output-eps-count": "3", "output-question-count": "10", ...}
+    kn: "vn"
+
+# 试卷题目
+EpQuestion:
+  ref-id: ""                              # M 所引用的题库中题目的ID
+  ref-bid:
+    - ""
+    - ""
+    - ""
+    - ""
+    - ...
+  title: ""
+  form:                                   # M Question的形式
+    - ""                                  #   =(example)=> {"JSSW", ....}
+      ""                                  #   =(example)=> {"ZHEXIANTU", ....}
+      ...
+  description: ""
+  composite-ep-qunit: {CompositeEpQuestionUnit}
+  # TODO
+
+CompositeEpQuestionUnit:
+  description: ""
+  stem: ""
+  options:
+    - order: 0
+      content: ""
+  qu-score: 0                             # O
+  std-answers:
+    - description: ""
+      criteria:
+        - ""
+      score: 0
+  sub-qunits:
+    - {CompositeEpQuestionUnit}
+  ext-features:
+    k1: {DesignProperty}
+    kn: {DesignProperty}
+
+DesignProperty:
+  media-type: ""                          #   Media-Type
+  link: ""                                #   Link
+  value: ""

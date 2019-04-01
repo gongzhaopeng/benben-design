@@ -1,0 +1,62 @@
+-- Database: MongoDB
+
+# 题目
+Question:
+  id: ""                                  # M
+#+++  # metadata
+  create-time:                            # M
+  author:                                 # M
+    ref-id: ""
+    last-name: ""
+    nickname: ""
+  state:  ""    2                         # M 题目状态, =(values)=>{"Developing", "Usable", "Discarded", ...}
+#---  # metadata
+  bid:                                    # M 业务ID
+    - ""                                  #   =(example)=>{"XIAOSHENGCHU", ...}
+    - ""                                  #   =(example)=>{"BEIJING", ...}
+    - ""                                  #   =(example)=>{"SIZHONG", ...}
+    - ""                                  #   =(example)=>{"1001", ...}
+    - ...
+  title:  ""                              # M
+  form:                                   # M Question的形式
+    - ""                                  #   =(example)=> {"JSSW", ....}
+      ""                                  #   =(example)=> {"ZHEXIANTU", ....}
+      ...
+  description:  ""                        # M 用于管理
+  composite-qunit: {CompositeQuestionUnit}  # M
+  tags:                                   # O 用于题目管理
+    - ""                                  #   =(example)=> grade: "1"
+
+# 可复合的题目单位
+CompositeQuestionUnit:
+  description:  ""                        # M
+  stem: ""                                # O 富文本编辑器输出的结果, 资源由客户端上传至资源服务器(建议添加资源浏览功能)
+#  tip:  ""                                #   作答项提示, 富文本编辑器输出的结果 # paper
+  options:                                # O 选项集, 仅当作答项形式为选择题时出现
+    - order: 0
+#      symbol: ""                         #   选项标志符, =(example)=> {"A", "B", "I", "II", ...} # attributed to representation
+      content: ""                         #   富文本编辑器输出的结果, 同stem
+  answer-match-strategy: {AnswerMatchStrategy}  # O 答案匹配策略
+  std_answers:                            # O 匹配优先级由高到低
+    - description: ""                     #   用于管理
+      criteria:
+        - ""
+#      acceptability: 0.0                  #   可接受度  range(0.0, 1.0]  # paper
+#  auto_gradable: true                     # O 是否可自动化评分            # paper
+  sub-qunits:                             # O 题目单位可包含更下级题目单位, 可形成树状结构
+    - {CompositeQuestionUnit}
+  ext-features:                           # O 特征向量, 有业务含义
+    k1: {DesignProperty}                  #   =(example)=> "dimension": {media_type: "text/plain", link: null, value: "JSSW"}
+    kn: {DesignProperty}
+
+# 答案匹配策略
+AnswerMatchStrategy:
+  type: ""                                #   策略类型, =(values)=>{"ORDER_SENSITIVE_EQUAL", "ORDER_INSENSITIVE_EQUAL", ...}
+  metadata:                               #   策略metadata
+    k1: "v1"
+    kn: "vn"
+
+DesignProperty:
+  media-type: ""                          #   Media-Type
+  link: ""                                #   Link
+  value: ""

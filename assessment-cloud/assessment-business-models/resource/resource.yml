@@ -1,0 +1,18 @@
+-- Database: MySQL
+
+# 资源
+Resource:
+  id: ""
+  title: ""
+  description: ""
+  media-type: ""
+  url: ""
+
+TagResourceMap:
+  tag-id: ref-id
+  resource-id: ref-id
+
+Tag:
+  id: ""
+  title: ""
+  description: ""

@@ -3,12 +3,6 @@
 # 试卷模子
 ExamPaperMold:
   id: ""                                  # M
-  bid:                                    # M 业务ID
-    - ""                                  #   =(example)=>{"XIAOSHENGCHU", ...}
-    - ""                                  #   =(example)=>{"BEIJING", ...}
-    - ""                                  #   =(example)=>{"SIZHONG", ...}
-    - ""                                  #   =(example)=>{"1001", ...}
-    - ...
   titile: ""                              # M
   description: ""                         # M 用于管理
   introduction: ""                        # M 试卷引导语, 富文本编辑器输出的结果
@@ -26,13 +20,14 @@ ExamPaperMold:
 # 可复合的试卷子块生成器
 CompositeEpsGenerator:
   title: ""                               # M
+  purpose: ""                             #   =(values)=>{"Formal", "Experiment", ...}
   description: ""                         # M 用于管理
   introduction: ""                        # M 试卷子块引导语, 富文本编辑器输出的结果
   generate-strategy: {EpsGenerateStrategy}
   sub-generators:
     - {CompositeEpsGenerator}
-  ep-questions:
-    - {EpQuestion}
+  epm-questions:
+    - {EpmQuestion}
   time-limit: 0                           # O unit: second
   ext-features:                           # O 特征向量, 有业务含义
     k1: {DesignProperty}
@@ -47,37 +42,26 @@ EpsGenerateStrategy:
     kn: "vn"
 
 # 试卷题目
-EpQuestion:
-  ref-id: ""                              # M 所引用的题库中题目的ID
-  ref-bid:
-    - ""
-    - ""
-    - ""
-    - ""
-    - ...
+EpmQuestion:
+  id: ""                                  # M 所引用的题库中题目的ID
   title: ""
-  form:                                   # M Question的形式
-    - ""                                  #   =(example)=> {"JSSW", ....}
-      ""                                  #   =(example)=> {"ZHEXIANTU", ....}
-      ...
-  description: ""
-  composite-ep-qunit: {CompositeEpQuestionUnit}
+  form: ""                                # M Question的形式
+  composite-epm-qunit: {CompositeEpmQuestionUnit}
   # TODO
 
-CompositeEpQuestionUnit:
-  description: ""
+CompositeEpmQuestionUnit:
   stem: ""
   options:
-    - order: 0
+    - number: 0
       content: ""
   qu-score: 0                             # O
   std-answers:
-    - description: ""
+    - number: 0
       criteria:
         - ""
       score: 0
   sub-qunits:
-    - {CompositeEpQuestionUnit}
+    - {CompositeEpmQuestionUnit}
   ext-features:
     k1: {DesignProperty}
     kn: {DesignProperty}

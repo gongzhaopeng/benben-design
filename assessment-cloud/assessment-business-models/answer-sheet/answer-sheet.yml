@@ -3,9 +3,7 @@
 # 答卷
 AnswerSheet:
   id: ""                                        # M
-  examinee: {AsExamineeBrief}                   # M
-  exam: {AsExamBrief}                           # M
-  exam-paper: {AsExamPaperBrief}                # M
+  admission-ticket: {AsAdmissionTicket}         # M
   start-time: 0L                                # M
   end-time: 0L                                  # M
   qu-replies:                                   # M
@@ -17,16 +15,11 @@ AnswerSheet:
     kn: "vn"
   # TODO
 
-AsExamineeBrief:
+AsAdmissionTicket:
   id: ""
-  # TODO
-
-AsExamBrief:
-  id: ""
-  # TODO
-
-AsExamPaperBrief:
-  id: ""
+  user-id: ""
+  exam-id: ""
+  ep-id: ""
   # TODO
 
 AsQuReply:
@@ -34,6 +27,7 @@ AsQuReply:
     - 0
     - 0
     ...
+  question-id:  ""
   qu-path:                                      # M 题目单位路径
     - 0
     - 0

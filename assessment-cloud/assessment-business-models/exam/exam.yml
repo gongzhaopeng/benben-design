@@ -1,0 +1,14 @@
+-- Database: MySQL
+
+# 考试
+Exam:
+  id: ""                                        # M
+  # TODO
+
+# 准考证
+AdmissionTicket:
+  id: ""
+  create-time: {timestamp}                      # M 创建时间
+  user-id: ""                                   # M 用户ID
+  exam-id: ""                                   # M 考试ID
+  ep-id: ""                                     # M 试卷ID

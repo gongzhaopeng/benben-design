@@ -12,7 +12,6 @@ Question:
   state:  ""                              # M 题目状态, =(values)=>{"Developing", "Usable", "Discarded", ...}
   #---  # metadata
   title:  ""                              # M
-  form: ""                                # M Question的形式, =(values)=>{"Choice", "MultipleChoice", "FillIn", "Q&A", ...}
   description:  ""                        # M 用于管理
   composite-qunit: {CompositeQuestionUnit}  # M
   tags:                                   # O 用于题目管理
@@ -21,6 +20,7 @@ Question:
 # 可复合的题目单位
 CompositeQuestionUnit:
   description:  ""                        # M
+  form: ""                                # M Question的形式, =(values)=>{"Choice", "MultipleChoice", "FillIn", "Q&A", "Composite", ...}
   stem: ""                                # O 富文本编辑器输出的结果, 资源由客户端上传至资源服务器(建议添加资源浏览功能)
   #  tip:  ""                                #   作答项提示, 富文本编辑器输出的结果 # paper
   options:                                # O 选项集, 仅当作答项形式为选择题时出现

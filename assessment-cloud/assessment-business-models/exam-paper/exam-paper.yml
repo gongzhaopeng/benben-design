@@ -8,7 +8,8 @@ ExamPaper:
   epm-id: ""                              # M 对应exam-paper-mold的ID
   titile: ""                              # M
   introduction: ""                        # M 试卷引导语, 富文本编辑器输出的结果
-  # TODO
+  sections:                               # M
+    - {CompositeEpSection}
   time-limit: 0                           # O unit: second
   ext-features:                           # O 特征向量, 有业务含义
     k1: {DesignProperty}
@@ -28,11 +29,11 @@ CompositeEpSection:
   introduction: ""                        # M 试卷子块引导语, 富文本编辑器输出的结果
   sub-sections:
     - {CompositeEpSection}
-  ep-questions:
+  questions:
     - {EpQuestion}
   time-limit: 0                           # O unit: second
   ext-features:                           # O 特征向量, 有业务含义
     k1: {DesignProperty}
     kn: {DesignProperty}
-  default-qu-score: 0                     # O
+  default-qu-score: 0.0                   # O
   # TODO

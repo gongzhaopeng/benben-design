@@ -12,8 +12,8 @@ AnswerSheet:
   eps-details:
     - {AsEpsDetail}
   ext-feedbacks:                                # O 扩展的反馈信息
-    k1: "v1"
-    kn: "vn"
+    k1: {DesignProperty}
+    kn: {DesignProperty}
   # TODO
 
 AsAdmissionTicket:
@@ -24,7 +24,7 @@ AsAdmissionTicket:
   # TODO
 
 AsQuReply:
-  eps-path:                                     # M 试卷子块路径
+  question-path:                                # M 试卷子块路径
     - 0
     - 0
     ...
@@ -36,8 +36,8 @@ AsQuReply:
   answer:                                       # M 答案
     - ""
   ext-feedbacks:                                # O 扩展的反馈信息
-    k1: "v1"
-    kn: "vn"
+    k1: {DesignProperty}
+    kn: {DesignProperty}
   # TODO
 
 AsEpsDetail:
@@ -48,7 +48,11 @@ AsEpsDetail:
   start-time: 0L
   end-time: 0L
   ext-feedbacks:                                # O 扩展的反馈信息
-    k1: "v1"
-    kn: "vn"
+    k1: {DesignProperty}
+    kn: {DesignProperty}
   # TODO
 
+DesignProperty:
+  media-type: ""                                #   Media-Type
+  link: ""                                      #   Link
+  value: ""

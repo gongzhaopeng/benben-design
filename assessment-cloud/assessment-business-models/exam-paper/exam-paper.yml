@@ -1,14 +1,30 @@
 -- Database: MongoDB
 
-# 试卷模子
+# 试卷
 ExamPaper:
+  id: ""                                  # M
+  create-time:                            # M
+  admission-ticket: {EpAdmissionTicket}   # M
+  epm-id: ""                              # M 对应exam-paper-mold的ID
+  titile: ""                              # M
+  introduction: ""                        # M 试卷引导语, 富文本编辑器输出的结果
+  # TODO
+  time-limit: 0                           # O unit: second
+  ext-features:                           # O 特征向量, 有业务含义
+    k1: {DesignProperty}
+    kn: {DesignProperty}
+  default-qu-score: 0.0                   # O
 # TODO
+
+EpAdmissionTicket:
+  id: ""
+  user-id: ""
+  exam-id: ""
 
 # 可复合的试卷子块
 CompositeEpSection:
   title: ""                               # M
   purpose: ""                             #   =(values)=>{"Formal", "Experiment", ...}
-  description: ""                         # M 用于管理
   introduction: ""                        # M 试卷子块引导语, 富文本编辑器输出的结果
   sub-sections:
     - {CompositeEpSection}

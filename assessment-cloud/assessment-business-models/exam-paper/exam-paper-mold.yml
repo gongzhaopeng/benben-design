@@ -65,10 +65,7 @@ CompositeEpQuestionUnit:
   qu-score: 0.0                           # O
   answer-match-strategy: {EpAnswerMatchStrategy}  # O 答案匹配策略
   std-answers:
-    - number: 0
-      criteria:
-        - ""
-      score: 0.0
+    - {EpStdAnswer}
   sub-qunits:
     - {CompositeEpQuestionUnit}
   ext-features:
@@ -81,6 +78,17 @@ EpAnswerMatchStrategy:
   metadata:                               #   策略metadata
     k1: "v1"
     kn: "vn"
+
+EpStdAnswer:
+  number: 0                               # M 编号越小,优先级越高
+  choices:
+    - 0
+    - 0
+    ...
+  criteria:
+    - {MediumProperty}
+  score: 0.0
+  # TODO
 
 MediumProperty:
   media-type: ""                          #   Media-Type

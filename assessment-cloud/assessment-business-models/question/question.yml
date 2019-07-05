@@ -29,11 +29,7 @@ CompositeQuestionUnit:
       content: ""                         #   富文本编辑器输出的结果, 同stem
   answer-match-strategy: {AnswerMatchStrategy}  # O 答案匹配策略
   std_answers:                            # O
-    - number: 0                           # M 编号越小,优先级越高
-      description: ""                     #   用于管理
-      criteria:
-        - ""
-  #      acceptability: 0.0                  #   可接受度  range(0.0, 1.0]  # paper
+    - {StdAnswer}
   #  auto_gradable: true                     # O 是否可自动化评分            # paper
   sub-qunits:                             # O 题目单位可包含更下级题目单位, 可形成树状结构
     - {CompositeQuestionUnit}
@@ -47,6 +43,18 @@ AnswerMatchStrategy:
   metadata:                               #   策略metadata
     k1: "v1"
     kn: "vn"
+
+StdAnswer:
+  number: 0                               # M 编号越小,优先级越高
+  description: ""                         #   用于管理
+  choices:
+    - 0
+    - 0
+    ...
+  criteria:
+    - {MediumProperty}
+  # acceptability: 0.0                      #   可接受度  range(0.0, 1.0]  # paper
+  # TODO
 
 MediumProperty:
   media-type: ""                          #   Media-Type

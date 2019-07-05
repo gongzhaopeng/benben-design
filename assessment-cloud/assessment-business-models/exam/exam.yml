@@ -3,11 +3,20 @@
 # 考试
 Exam:
   id: ""                                        # M
+  #+++  # metadata
+  create-time:                                  # M
+  author:                                       # M
+    id: ""
+    last-name: ""
+    nickname: ""
+  state:  ""                                    # M 考试状态, =(values)=>{"Developing", "Usable", "Discarded", ...}
+  #---  # metadata
+  form: ""                                      # M 考试类型
   # TODO
 
 # 准考证
 AdmissionTicket:
-  id: ""
+  id: ""                                        # M
   create-time: {timestamp}                      # M 创建时间
   user-id: ""                                   # M 用户ID
   exam-id: ""                                   # M 考试ID

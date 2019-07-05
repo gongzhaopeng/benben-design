@@ -34,7 +34,7 @@ AsQuReply:
     - 0
     ...
   answer:                                       # M 答案
-    - ""
+    - ""                                        # TODO 多媒体格式
   ext-feedbacks:                                # O 扩展的反馈信息
     k1: {DesignProperty}
     kn: {DesignProperty}

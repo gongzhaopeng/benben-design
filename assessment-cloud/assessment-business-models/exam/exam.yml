@@ -9,7 +9,7 @@ Exam:
     id: ""
     last-name: ""
     nickname: ""
-  state:  ""                                    # M 考试状态, =(values)=>{"Developing", "Usable", "Discarded", ...}
+  state:  ""                                    # M 考试状态, =(values)=>{"Preparing", "Released", "Discarded", ...}
   #---  # metadata
   form: ""                                      # M 考试类型
   # TODO

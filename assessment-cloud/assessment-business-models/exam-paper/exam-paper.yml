@@ -12,8 +12,8 @@ ExamPaper:
     - {CompositeEpSection}
   time-limit: 0                           # O unit: second
   ext-features:                           # O 特征向量, 有业务含义
-    k1: {DesignProperty}
-    kn: {DesignProperty}
+    k1: {MediumProperty}
+    kn: {MediumProperty}
   default-qu-score: 0.0                   # O
 # TODO
 
@@ -33,7 +33,7 @@ CompositeEpSection:
     - {EpQuestion}
   time-limit: 0                           # O unit: second
   ext-features:                           # O 特征向量, 有业务含义
-    k1: {DesignProperty}
-    kn: {DesignProperty}
+    k1: {MediumProperty}
+    kn: {MediumProperty}
   default-qu-score: 0.0                   # O
   # TODO

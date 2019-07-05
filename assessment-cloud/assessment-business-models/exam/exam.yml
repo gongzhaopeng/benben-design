@@ -1,4 +1,4 @@
--- Database: MySQL
+-- Database: MongoDB
 
 # 考试
 Exam:
@@ -13,11 +13,3 @@ Exam:
   #---  # metadata
   form: ""                                      # M 考试类型
   # TODO
-
-# 准考证
-AdmissionTicket:
-  id: ""                                        # M
-  create-time: {timestamp}                      # M 创建时间
-  user-id: ""                                   # M 用户ID
-  exam-id: ""                                   # M 考试ID
-  ep-id: ""                                     # M 试卷ID

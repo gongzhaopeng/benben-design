@@ -12,8 +12,8 @@ AnswerSheet:
   eps-details:
     - {AsEpsDetail}
   ext-feedbacks:                                # O 扩展的反馈信息
-    k1: {MediumProperty}
-    kn: {MediumProperty}
+    k1: {MediumValue}
+    kn: {MediumValue}
   # TODO
 
 AsAdmissionTicket:
@@ -38,10 +38,10 @@ AsQuReply:
     - 0
     ...
   contents:
-    - {MediumProperty}
+    - {MediumValue}
   ext-feedbacks:                                # O 扩展的反馈信息
-    k1: {MediumProperty}
-    kn: {MediumProperty}
+    k1: {MediumValue}
+    kn: {MediumValue}
   # TODO
 
 AsEpsDetail:
@@ -52,11 +52,12 @@ AsEpsDetail:
   start-time: 0L
   end-time: 0L
   ext-feedbacks:                                # O 扩展的反馈信息
-    k1: {MediumProperty}
-    kn: {MediumProperty}
+    k1: {MediumValue}
+    kn: {MediumValue}
   # TODO
 
-MediumProperty:
+MediumValue:
   media-type: ""                                #   Media-Type
+  mark: ""
   link: ""                                      #   Link
   value: ""

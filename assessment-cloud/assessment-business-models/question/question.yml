@@ -34,8 +34,8 @@ CompositeQuestionUnit:
   sub-qunits:                             # O 题目单位可包含更下级题目单位, 可形成树状结构
     - {CompositeQuestionUnit}
   ext-features:                           # O 特征向量, 有业务含义
-    k1: {MediumProperty}                  #   =(example)=> "dimension": {media_type: "text/plain", link: null, value: "JSSW"}
-    kn: {MediumProperty}
+    k1: {MediumValue}                  #   =(example)=> "dimension": {media_type: "text/plain", link: null, value: "JSSW"}
+    kn: {MediumValue}
 
 # 答案匹配策略
 AnswerMatchStrategy:
@@ -52,11 +52,12 @@ StdAnswer:
     - 0
     ...
   criteria:
-    - {MediumProperty}
+    - {MediumValue}
   # acceptability: 0.0                      #   可接受度  range(0.0, 1.0]  # paper
   # TODO
 
-MediumProperty:
+MediumValue:
   media-type: ""                          #   Media-Type
+  mark: ""
   link: ""                                #   Link
   value: ""

@@ -20,8 +20,8 @@ ExamPaperMold:
   tags:                                   # O 用于试卷管理
     - ""                                  #
   ext-features:                           # O 特征向量, 有业务含义
-    k1: {MediumProperty}
-    kn: {MediumProperty}
+    k1: {MediumValue}
+    kn: {MediumValue}
   default-qu-score: 0.0                   # O
   # TODO
 
@@ -38,8 +38,8 @@ CompositeEpsGenerator:
     - {EpQuestion}
   time-limit: 0                           # O unit: second
   ext-features:                           # O 特征向量, 有业务含义
-    k1: {MediumProperty}
-    kn: {MediumProperty}
+    k1: {MediumValue}
+    kn: {MediumValue}
   default-qu-score: 0.0                   # O
 
 # 试卷子块生成策略
@@ -69,8 +69,8 @@ CompositeEpQuestionUnit:
   sub-qunits:
     - {CompositeEpQuestionUnit}
   ext-features:
-    k1: {MediumProperty}
-    kn: {MediumProperty}
+    k1: {MediumValue}
+    kn: {MediumValue}
 
 # 答案匹配策略
 EpAnswerMatchStrategy:
@@ -86,11 +86,12 @@ EpStdAnswer:
     - 0
     ...
   criteria:
-    - {MediumProperty}
+    - {MediumValue}
   score: 0.0
   # TODO
 
-MediumProperty:
+MediumValue:
   media-type: ""                          #   Media-Type
+  mark: ""
   link: ""                                #   Link
   value: ""

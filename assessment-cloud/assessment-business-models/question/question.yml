@@ -20,7 +20,7 @@ Question:
 # 可复合的题目单位
 CompositeQuestionUnit:
   description:  ""                        # M
-  form: ""                                # M Question的形式, =(values)=>{"Choice", "MultipleChoice", "FillIn", "Q&A", "Composite", ...}
+  form: ""                                # M Question的形式, =(values)=>{"Choice", "MChoice", "FillIn", "QA", "Composite", ...}
   stem: ""                                # O 富文本编辑器输出的结果, 资源由客户端上传至资源服务器(建议添加资源浏览功能)
   #  tip:  ""                                #   作答项提示, 富文本编辑器输出的结果 # paper
   options:                                # O 选项集, 仅当作答项形式为选择题时出现
@@ -28,7 +28,7 @@ CompositeQuestionUnit:
       #      symbol: ""                         #   选项标志符, =(example)=> {"A", "B", "I", "II", ...} # attributed to representation
       content: ""                         #   富文本编辑器输出的结果, 同stem
   answer-match-strategy: {AnswerMatchStrategy}  # O 答案匹配策略
-  std_answers:                            # O
+  std-answers:                            # O
     - {StdAnswer}
   #  auto_gradable: true                     # O 是否可自动化评分            # paper
   sub-qunits:                             # O 题目单位可包含更下级题目单位, 可形成树状结构
@@ -39,7 +39,7 @@ CompositeQuestionUnit:
 
 # 答案匹配策略
 AnswerMatchStrategy:
-  type: ""                                #   策略类型, =(values)=>{"ORDER_SENSITIVE_EQUAL", "ORDER_INSENSITIVE_EQUAL", ...}
+  type: ""                                #   策略类型, =(values)=>{"OrderSensitiveEqual", "OrderInsensitiveEqual", ...}
   metadata:                               #   策略metadata
     k1: "v1"
     kn: "vn"

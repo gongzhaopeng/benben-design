@@ -1,0 +1,37 @@
+HZSB_Q1:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: 0001218QE
+  description: 汉字识别样题1
+  compositeQunit:
+    form: Choice
+    stem: <audio>{AUDIO_1}</audio>
+    options:
+      - number: 1
+        content: 旁
+      - number: 2
+        content: 胖
+      - number: 3
+        content: 劳
+      - number: 4
+        content: 侧
+    answerMatchStrategy:
+      type: OrderSensitiveEqual
+    stdAnswers:
+      - number: 1
+        choices:
+          - 1
+    resources:
+      - id: AUDIO_1
+        mediaType: audio/mp4
+        contentUrl: {url}
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 汉字识别能力

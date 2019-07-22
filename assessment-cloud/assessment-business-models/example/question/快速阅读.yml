@@ -1,0 +1,29 @@
+KSYD_Q1:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: B001
+  description: 快速阅读样题1
+  compositeQunit:
+    form: Choice
+    stem: 猫和狗不会飞。
+    options:
+      - number: 1
+        content: 正确
+      - number: 2
+        content: 错误
+    answerMatchStrategy:
+      type: OrderSensitiveEqual
+    stdAnswers:
+      - number: 1
+        choices:
+          - 1
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 快速阅读

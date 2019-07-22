@@ -1,0 +1,49 @@
+CHL_Q1:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: p2
+  description: 词汇量样题1
+  compositeQunit:
+    form: Choice
+    stem: <audio>{AUDIO_S1}</audio>
+    options:
+      - number: 1
+        content: 态度温和<audio>{AUDIO_A1}</audio>
+      - number: 2
+        content: 做事善良<audio>{AUDIO_A2}</audio>
+      - number: 3
+        content: 性格暴躁<audio>{AUDIO_A3}</audio>
+      - number: 4
+        content: 为人低调<audio>{AUDIO_A4}</audio>
+    answerMatchStrategy:
+      type: OrderSensitiveEqual
+    stdAnswers:
+      - number: 1
+        choices:
+          - 1
+    resources:
+      - id: AUDIO_S1
+        mediaType: audio/mp4
+        contentUrl: {url}
+      - id: AUDIO_A1
+        mediaType: audio/mp4
+        contentUrl: {url}
+      - id: AUDIO_A2
+        mediaType: audio/mp4
+        contentUrl: {url}
+      - id: AUDIO_A3
+        mediaType: audio/mp4
+        contentUrl: {url}
+      - id: AUDIO_A4
+        mediaType: audio/mp4
+        contentUrl: {url}
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 词汇

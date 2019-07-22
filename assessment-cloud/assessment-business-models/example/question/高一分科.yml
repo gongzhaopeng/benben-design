@@ -1,0 +1,130 @@
+GYFK_Q1:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: Ability1第9题
+  description: 快速阅读样题1. <<高一新生学科选择测评（56题版）>>
+  compositeQunit:
+    form: Choice
+    stem: '要将下述四个句子依次填入句子的________中，最合适的顺序是：（）
+      老头儿放下了钓丝，把它踩在脚底下，然后_______，同时______，______，那个胸鳍高高地挺在空中，高得齐着一个人的胸膛。他觉得鱼叉已经扎进鱼身上了，于是______。
+      ①使出全身的力气，比他刚才所聚集的更多的力气
+      ②把鱼叉高高地举起来，举到不能再高的高度
+      ③把鱼叉扎进正好在那大胸鳍后面的鱼腰里
+      ④他靠在叉把上面，把鱼叉扎得更深一点。'
+    options:
+      - number: 1
+        content: ①②③④
+      - number: 2
+        content: ②①④③
+      - number: 3
+        content: ①②④③
+      - number: 4
+        content: ②①③④
+    answerMatchStrategy:
+      type: OrderSensitiveEqual
+    stdAnswers:
+      - number: 1
+        choices:
+          - 4
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 言语能力倾向
+
+GYFK_Q2:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: Ability2第17题
+  description: 快速阅读样题2. <<高一新生学科选择测评（56题版）>>
+  compositeQunit:
+    form: Choice
+    stem: '若满足条件<image>IMAGE_1</image>的整数点（x，y）恰好有9个，其中整数点包括坐标轴上的整数点，则整数m的值为（ ）'
+    options:
+      - number: 1
+        content: -1
+      - number: 2
+        content: 0
+      - number: 3
+        content: 1
+      - number: 4
+        content: 2
+    answerMatchStrategy:
+      type: OrderSensitiveEqual
+    stdAnswers:
+      - number: 1
+        choices:
+          - 3
+    resources:
+      - id: IMAGE_1
+        mediaType: image/jpeg
+        contentUrl: {url}
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 数学能力倾向
+
+GYFK_Q3:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: Ability2第21题
+  description: 快速阅读样题3. <<高一新生学科选择测评（56题版）>>
+  compositeQunit:
+    form: Composite
+    stem: '<p style=\"margin-left:0cm; margin-right:0cm; text-align:justify\"><span style=\"font-size:20px\"><strong>请根据以下数据材料，回答第(7)至(8)题。</strong></span></p>\n\n<p style=\"margin-left:0cm; margin-right:0cm; text-align:justify\"><span style=\"font-size:20px\"><span style=\"font-family:Arial,Helvetica,sans-serif\">某自然保护区内有野兔、羚羊、麋鹿和野鸡四种保护动物共<strong>约</strong>10000只，某次抽样调查结果如下图所示。</span></span></p>\n\n<p style=\"margin-left:0cm; margin-right:0cm; text-align:justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt=\"\" src=\"http://www.xueliceping.com:9003/api/v1/file/play/5ad9910c1161dd663f1c9f34\" style=\"height:282px; width:627px\" /></p>\n\n<p style=\"margin-left:0cm; margin-right:0cm; text-align:justify\">&nbsp;</p>\n'
+    subQunits:
+      - form: Choice
+        stem: 根据材料，该自然保护区内“麋鹿”的数量占总数的比例为（ ）
+        options:
+          - number: 1
+            content: 30%
+          - number: 2
+            content: 33%
+          - number: 3
+            content: 35%
+          - number: 4
+            content: 40%
+        answerMatchStrategy:
+          type: OrderSensitiveEqual
+        stdAnswers:
+          - number: 1
+            choices:
+              - 1
+      - form: Choice
+          stem: 整个保护区中羚羊的数量约为多少（ ）
+          options:
+            - number: 1
+              content: 2400
+            - number: 2
+              content: 2500
+            - number: 3
+              content: 2800
+            - number: 4
+              content: 3000
+          answerMatchStrategy:
+            type: OrderSensitiveEqual
+          stdAnswers:
+            - number: 1
+              choices:
+                - 2
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 数学能力倾向

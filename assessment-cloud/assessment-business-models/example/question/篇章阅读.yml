@@ -1,0 +1,37 @@
+PZYD_Q1:
+  id: {id}
+  createTime: {timestamp}
+  lUTime: {timestamp}
+  author:
+    id: {id}
+    name: gongzhaopeng
+    nickname: atzu68
+  state: Usable
+  title: 0001218QE
+  description: 篇章阅读样题1
+  compositeQunit:
+    form: Choice
+    stem: <image>{IMAGE_1}</image>通过这首诗，作者想要表达（）
+    options:
+      - number: 1
+        content: 越来越深的对母亲的思念。
+      - number: 2
+        content: 日渐衰老带来的伤感。
+      - number: 3
+        content: 看到落花随流水流去的愁绪。
+      - number: 4
+        content: 难以释怀的孤独。
+    answerMatchStrategy:
+      type: OrderSensitiveEqual
+    stdAnswers:
+      - number: 1
+        choices:
+          - 1
+    resources:
+      - id: IMAGE_1
+        mediaType: image/jpeg
+        contentUrl: {url}
+  difficulty: 1.5
+  tags:
+    - id: {id}
+      title: 0001218QE
